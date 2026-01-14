@@ -74,11 +74,11 @@ AssertionError: Should get 410 for rest (894 got 410)
 ## Screenshots / Evidence
 
 ### API Returning Sold Out (410 Gone)
-![Postman Sold Out](stock_gone.png)
+![Postman Sold Out](../docs/images/stock_gone.png)
 
 ### Proof Script Result
 
-![[script_result.png]]
+![script_result](../docs/images/script_result.png)
 ### **Why the Traceback Appeared in the Proof Script**
 
 During testing with the `proof_of_correctness.py` script, a traceback occurred due to an assertion failing:
@@ -90,17 +90,17 @@ AssertionError: Should get 410 for rest (894 got 410)
 This happened because the script expected exactly 900 "sold out" (HTTP 410) responses after 100 items were successfully purchased. However, 6 requests received a 500 Internal Server Error instead, resulting in only 894 "sold out" responses.
 
 ### Database 'inventory' Table Before Test
-![Database before test](db_before_sold_out.png)
+![Database before test](../docs/images/db_before_sold_out.png)
 
 ### Database 'inventory' Table After Test
-![Database after test](db_after_sold_out.png)
+![Database after test](../docs/images/db_after_sold_out.png)
 
 ### API Tested for the endpoint for /buy_ticket
 
 1.  After Successfully Purchased
-![[purchased_successfull.png]]
+![purchased_successfull](../docs/images/purchased_successfull.png)
 2. After the items has been sold out
-![[sold_out.png]]
+![sold_out](../docs/images/sold_out.png)
 
 ---
 
