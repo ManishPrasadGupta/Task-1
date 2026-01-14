@@ -121,6 +121,7 @@ async def handle_event(request: Request):
 - Accepts POST JSON payload
 - It’s **non-blocking:** immediately adds event to `deque` and returns 202.
 - Does **not** wait for DB write!
+- ![POST /event example in action](../docs/images/event_post_example.png)
 
 ## 6. **Load Test Script**
 
